@@ -94,6 +94,8 @@ if __name__ == '__main__':
 
     _t = {'forward_pass': Timer(), 'misc': Timer()}
 
+    global confi = []
+    
     # testing begin
     for i, img_name in enumerate(test_dataset):
         image_path = testset_folder + img_name
@@ -187,6 +189,10 @@ if __name__ == '__main__':
                 w = int(box[2]) - int(box[0])
                 h = int(box[3]) - int(box[1])
                 confidence = str(box[4])
+                try:
+                    confi.append(confidence)
+                except:
+                    pass
                 line = str(x) + " " + str(y) + " " + str(w) + " " + str(h) + " " + confidence + " \n"
                 fd.write(line)
 
