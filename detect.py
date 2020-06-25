@@ -83,8 +83,9 @@ if __name__ == '__main__':
     resize = 1
 
     # testing begin
-    for i in range(100):
-        image_path = "/content/frames/*.jpg"
+     image_path = "/content/frames/*.jpg"
+
+    for i in image_path:
         img_raw = cv2.imread(image_path, cv2.IMREAD_COLOR)
 
         img = np.float32(img_raw)
