@@ -201,12 +201,15 @@ if __name__ == '__main__':
                 b = list(map(int, b))
                 cv2.rectangle(img_raw, (b[0], b[1]), (b[2], b[3]), (0, 0, 255), 2)
                 # save face image
-                if not os.path.exists("./faces/"):
-                    os.makedirs("./faces/")
-                
-                extracted_face = img_raw[b[1]: b[3], b[0]: b[2]]
-                name = "./faces/" + str(i) + ".jpg"
-                cv2.imwrite(name, extracted_face)
+                try:
+                    if not os.path.exists("./faces/"):
+                        os.makedirs("./faces/")
+
+                    extracted_face = img_raw[b[1]: b[3], b[0]: b[2]]
+                    name = "./faces/" + str(i) + ".jpg"
+                    cv2.imwrite(name, extracted_face)
+                except:
+                    pass
                 
                 cx = b[0]
                 cy = b[1] + 12
