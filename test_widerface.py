@@ -94,7 +94,8 @@ if __name__ == '__main__':
 
     _t = {'forward_pass': Timer(), 'misc': Timer()}
 
-    global confi = []
+    global confi
+    confi = []
     
     # testing begin
     for i, img_name in enumerate(test_dataset):
