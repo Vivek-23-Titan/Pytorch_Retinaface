@@ -220,7 +220,7 @@ if __name__ == '__main__':
                 cx = b[0]
                 cy = b[1] + 12
                 cv2.putText(img_raw, text, (cx, cy),
-                            cv2.FONT_HERSHEY_DUPLEX, 1.5, (255, 255, 255))
+                            cv2.FONT_HERSHEY_DUPLEX, 1, (255, 255, 255))
 
                 # landms
                 cv2.circle(img_raw, (b[5], b[6]), 1, (0, 0, 255), 4)
