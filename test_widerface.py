@@ -206,7 +206,7 @@ if __name__ == '__main__':
                     continue
                 text = "{:.4f}".format(b[4])
                 b = list(map(int, b))
-                cv2.rectangle(img_raw, (b[0] - 2, b[1] - 2), (b[2] + 2, b[3] + 2), (0, 0, 255), 2)
+                cv2.rectangle(img_raw, (b[0] - 2, b[1] - 2), (b[2] + 2, b[3] + 2), (255, 0, 0), 3)
                 # save face image
                 try:
                     if not os.path.exists("./faces/"):
